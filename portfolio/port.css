@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+:root {
+    --purple-color: rgb(132, 30, 63);  /* #841e3f */
+    --grey-color: #171819; /* #3D3F43 */
+    --blue-color: rgb(80, 119, 170);
+    --offwhite-color: rgb(243, 243, 243);
+}
+
+body{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+}
+
+/* https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+
+#top, body, #skills, section{
+  background-color: var(--offwhite-color);
+}
+
+main{
+  background-color: white;
+}
+
+section{
+  color: var(--grey-color);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+section:not(#intro){
+  margin: 1rem;
+  /* border: 1px solid var(--grey-color); */
+  border-radius: 5px;
+}
+
+section h2:not(#intro){
+  color: var(--purple-color);
+  font-weight: bold;
+}
+
+img{
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  object-fit: cover;
+}
+
+p{
+  font-size: 1.1rem;
+}
+
+
+/* ===== HEADER / NAV ========= */
+
+#top{
+  /* line-height: 1.5; */
+  /* padding: 0.55rem 2rem .55rem 4rem; */
+  padding: 0;
+}
+.navbarbrand{
+  padding-left: 2.5rem;
+}
+
+.navbarbrand img{
+  width: 100px;
+  padding: 1rem 0;
+}
+
+nav .desk{
+  display: none;
+}
+
+.menu{
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  background-color: var(--offwhite-color);
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.menu li{
+  border-top: 1px solid var(--grey-color);
+}
+
+nav .celular{
+  font-size: 1.5rem;
+  padding-right: 2.5rem;
+}
+
+
+
+nav ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+}
+
+ul li{
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+
+nav ul li{
+  color: var(--purple-color);
+  padding: 1.4rem;
+  font-weight: bold;
+}
+
+header a{
+  color: black;
+  text-decoration: none;
+}
+
+header a:hover{
+  text-decoration: none;
+}
+
+main a{
+  color: white;
+  text-decoration: none;
+}
+
+main a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+#me a{
+  color: var(--purple-color);
+}
+
+nav ul a:hover, .dropdown:hover{
+  background-color: var(--purple-color);
+  text-decoration: none;
+  color: white;
+}
+
+.fa-mobile-alt, .fa-envelope{
+  padding: 0 .5rem 0 1rem;
+}
+
+.nav.nav-pills.desk.navbar-nav.mr-auto{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* ===== SECTION INTRO ========= */
+#intro{
+    background-image: url("./img/back2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#intro a{
+  text-decoration: none;
+}
+
+#intro div h1{
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  font-size: 3rem;
+}
+
+#intro div h2{
+  font-size: 1.5rem;
+  color: white;
+}
+
+
+#intro div p{
+  margin-top: .3rem;
+}
+
+#intro div ul{
+  padding: 0;
+}
+
+#intro div{
+  background: rgba(0,0,0,0.5);
+  padding: 1rem;
+}
+
+#intro div ul li{
+  font-size: 1.1rem;
+}
+
+/* ===== SECTION ABOUT ========= */
+
+.contact, .social{
+  padding: .5rem 0;
+}
+
+.social, .resume{
+  background-color: var(--purple-color);
+  display: inline-block;
+  margin: .8rem 0 0 0;
+  padding: .45rem 1rem;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+}
+
+.social:hover{
+  background-color: #5F0622;
+}
+
+.resume:hover{
+  background-color: #1E4981;
+}
+
+.resume{
+    background-color: var(--blue-color);
+}
+
+.social a{
+  color: white;
+  text-decoration: none;
+}
+
+#about{
+  display: flex;
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+}
+
+#about div{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#about div img{
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  /* box-shadow: 5px 5px rgb(199,199,199); */
+}
+
+#about div div{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* ===== SECTION PORT ========= */
+
+.grouping{
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.tech{
+  margin-top: 1.5rem;
+  flex: 1 0 100%;
+  justify-content:space-between;
+  display: flex;
+
+  /* different in desktop */
+  flex-flow: row wrap;
+  padding-left: .5rem;
+
+}
+
+.tech li{
+  /* margin-top: 1rem; */
+  margin-right: 1.5rem;
+}
+
+#port{
+  margin: 2rem;
+}
+
+#port h4{
+  margin-bottom: 1rem;
+}
+
+#port a{
+  color: brown;
+}
+
+#port a:hover{
+  background-color: none;
+}
+
+.folio{
+  flex: 1 0 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.folio{
+  box-shadow: 0px 1.5px rgb(199,199,199);
+}
+
+
+.folio img{
+  width: 100%;
+  /* margin-bottom: 1rem; */
+}
+
+.folio .description{
+  margin-top: 1rem;
+}
+
+#skills ul li{
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+
+}
+
+#skills h4{
+  margin: 2.2rem 0 1.3rem 0;
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+
+#skills h2{
+  margin-bottom: 1rem;
+}
+
+#skills i{
+  font-size: 2rem;
+}
+
+#skills div ul{
+  padding: 0;
+  columns: 2;
+}
+
+/* ===== SECTION FOOTER ========= */
+
+#foot{
+  line-height: 2;
+  font-size: 2rem;
+  text-align: right;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--purple-color);
+  color: white;
+}
+
+footer i{
+  padding: 0 1.5rem 0 0;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+footer p{
+  font-size: 1rem;
+  display: inline-block;
+  margin: 0;
+  padding: 0 0 0 1.5rem;
+}
+
+/* ======================================================== */
+/* do another media query for 1060px */
+@media screen and (min-width: 800px){
+
+
+    section{
+      padding: 2rem 0rem 2rem 2rem;
+    }
+
+    section:not(#intro){
+      margin: 2rem;
+      /* box-shadow: 2px 2px var(--grey-color); */
+    }
+
+      nav .celular{
+        display: none;
+        cursor: pointer;
+      }
+
+      nav .desk{
+        display: flex;
+      }
+
+      nav ul a:hover li{
+        color: white;
+      }
+
+        /* .menu ul:last-child{
+          margin-right: 2rem;
+        } */
+
+      .desk a:last-of-type{
+        margin-right: 2rem;
+      }
+
+      #top{
+        /* padding: 0 0 0 4rem; */
+      }
+
+      #me{
+        padding: 0 2rem 2rem 2rem;
+      }
+
+      #intro{
+        /* background-image: url("./img/background.png"); */
+        background-image: url("./img/back2.png");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        color: white;
+        height: 500px;
+      }
+
+      #intro div{
+        padding: 2rem 3rem;
+        border-radius: 5px;
+        display: inline-block;
+        background: rgba(0,0,0,0.7);
+      }
+      #about{
+        margin: 2rem;
+      }
+
+      #about div{
+        flex-flow: row nowrap;
+      }
+
+      #about div div p{
+        padding: 0;
+        display: inline-block;
+      }
+
+      #about div div{
+        columns: auto 2;
+        column-gap: 2rem;
+      }
+
+      .tech{
+        justify-content:center;
+        flex-flow: row nowrap;
+
+      }
+
+      .folio{
+        flex-flow: row wrap;
+
+        background-color: rgb(243, 243, 243);
+        padding: 1rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 1.5px 1.5px rgb(199,199,199);
+      }
+
+      .folio h4{
+        flex: 0 0 90%;
+      }
+      .folio a{
+        flex: 0 0 40%;
+      }
+      .folio a img{
+        padding-right: 1.4rem;
+      }
+
+      .folio .description{
+        flex: 0 0 58%;
+        padding: 0 1rem;
+      }
+
+      #skills ul{
+        display: flex;
+        flex-flow: row wrap;
+
+      }
+
+      #skills ul li{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        padding-right: 1.5rem;
+
+      }
+
+}
