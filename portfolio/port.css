@@ -22,6 +22,31 @@ main{
   background-color: white;
 }
 
+#scrollUp{
+
+  font-size:20px;
+
+  background: var(--purple-color) none repeat scroll 0 0;
+  color: white;
+  border:1px solid transparent;
+
+  position:fixed;
+  bottom:65px;
+  right:15px;
+
+  border-radius:3px;
+
+  height:46px;
+  width:46px;
+  line-height:46px;
+  margin:0;
+  padding: 0;
+
+  text-align:center;
+  transition:all .5s ease-in-out 0s;
+  z-index:999;
+}
+
 section{
   color: var(--grey-color);
   padding: 1rem;
@@ -32,11 +57,16 @@ section:not(#intro){
   margin: 1rem;
   /* border: 1px solid var(--grey-color); */
   border-radius: 5px;
+  box-shadow: 2px 2px rgb(199,199,199);
 }
 
 section h2:not(#intro){
   color: var(--purple-color);
   font-weight: bold;
+  /* padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--purple-color); */
+  text-shadow: 1px 1px 1px grey;
 }
 
 img{
@@ -72,6 +102,8 @@ nav .desk{
 }
 
 .menu{
+  transform: scale(0);
+  transform: scale(1);
   position: absolute;
   top: 4rem;
   right: 0;
@@ -100,11 +132,11 @@ nav ul{
   flex-flow: row nowrap;
   justify-content: space-between;
   justify-content: flex-end;
-}
 
-nav ul{
   padding: 0;
   margin: 0;
+
+  transform: scale(1);
 }
 
 ul li{
@@ -172,6 +204,8 @@ nav ul a:hover, .dropdown:hover{
   font-family: "Roboto", sans-serif;
   margin: 0;
   font-size: 3rem;
+
+  text-shadow: 1px 1px 1px black;
 }
 
 #intro div h2{
@@ -206,11 +240,16 @@ nav ul a:hover, .dropdown:hover{
 .social, .resume{
   background-color: var(--purple-color);
   display: inline-block;
-  margin: .8rem 0 0 0;
+  margin: 1.2rem 0 0 0;
   padding: .45rem 1rem;
   border-radius: 5px;
-  width: 150px;
+  width: 200px;
   text-align: center;
+}
+
+.social a{
+  color: white;
+  text-decoration: none;
 }
 
 .social:hover{
@@ -225,10 +264,6 @@ nav ul a:hover, .dropdown:hover{
     background-color: var(--blue-color);
 }
 
-.social a{
-  color: white;
-  text-decoration: none;
-}
 
 #about{
   display: flex;
@@ -282,7 +317,7 @@ nav ul a:hover, .dropdown:hover{
 }
 
 #port h4{
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 #port a{
@@ -301,7 +336,7 @@ nav ul a:hover, .dropdown:hover{
 }
 
 .folio{
-  box-shadow: 0 1.5px rgb(199,199,199);
+  /* box-shadow: 0 1.5px rgb(199,199,199); */
 }
 
 
@@ -312,6 +347,13 @@ nav ul a:hover, .dropdown:hover{
 
 .folio .description{
   margin-top: 1rem;
+}
+
+.folio h4{
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid grey;
+
 }
 
 #skills ul li{
@@ -346,7 +388,7 @@ nav ul a:hover, .dropdown:hover{
 /* ===== SECTION FOOTER ========= */
 
 #foot{
-  line-height: 2;
+  line-height: 3.2;
   font-size: 2rem;
   text-align: right;
 
@@ -360,7 +402,7 @@ nav ul a:hover, .dropdown:hover{
 }
 
 footer i{
-  padding: 0 1.5rem 0 0;
+  /* padding: 0 1.5rem 0 0; */
 }
 
 footer a{
@@ -391,7 +433,8 @@ footer p{
 
     section:not(#intro){
       margin: 2rem;
-      /* box-shadow: 2px 2px var(--grey-color); */
+      /* box-shadow: 0px 0px white; */
+
     }
 
       nav .celular{
@@ -459,7 +502,10 @@ footer p{
       .tech{
         justify-content:center;
         flex-flow: row nowrap;
+      }
 
+      #port h4{
+        margin-bottom: 1.8rem;
       }
 
       .folio{
@@ -469,11 +515,11 @@ footer p{
         padding: 1rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
-        box-shadow: 0 1.5px rgb(199,199,199);
+        /* box-shadow: 0 1.5px rgb(199,199,199); */
       }
 
       .folio h4{
-        flex: 0 0 90%;
+        flex: 0 0 100%;
       }
       .folio a{
         flex: 0 0 40%;
@@ -485,6 +531,7 @@ footer p{
       .folio .description{
         flex: 0 0 58%;
         padding: 0 1rem;
+        margin-top: 0;
       }
 
       #skills ul{
