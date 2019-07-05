@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+:root {
+    --purple-color: rgb(132, 30, 63);  /* #841e3f */
+    --grey-color: #171819; /* #3D3F43 */
+    --blue-color: rgb(80, 119, 170);
+    --offwhite-color: rgb(243, 243, 243);
+}
+
+/* ======================================================== */
+/* LEAL PAGE */
+
+#leal{
+  margin: 1rem 0;
+}
+
+#leal img{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+#leal ul li{
+  list-style: square;
+}
+
+#leal section a{
+  color: var(--purple-color);
+}
+
+#leal #about,
+#leal #loyalmeans{
+  display: flex;
+  flex-flow: column nowrap;
+
+}
+
+#leal #about .describe{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#leal .head{
+  margin: 0 1rem;
+
+}
+
+#leal h2{
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+#leal .logo{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#leal .logo img{
+  margin-right: 1rem;
+}
+
+/* ======================================================== */
+/* do another media query for 1060px */
+@media screen and (min-width: 800px){
+
+
+
+  #solution img{
+    height: auto;
+    max-width: 50%;
+  }
+
+  #solution ul li{
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  #solution h5{
+    margin: 1.5rem 0;
+  }
+
+  /* ========  LEAL PAGE  ========*/
+  /* ============================ */
+  #leal{
+    margin: 2rem;
+  }
+
+
+  #leal .logo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #leal .head{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #leal #loyalmeans,
+  #leal #about{
+    flex-flow: row nowrap;
+  }
+
+  #leal #about img{
+    max-width: 50%;
+    margin-right: 2rem;
+  }
+
+  #leal #loyalmeans img{
+    /* max-width: 100%; */
+    max-width: 40%;
+    /* flex: 0 0 30%; */
+    margin: 0 0 0 2rem;
+    /* height: auto; */
+  }
+
+  #leal section{
+    padding: 1rem;
+  }
+
+}
