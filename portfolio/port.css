@@ -22,14 +22,21 @@ body{
   background-color: var(--offwhite-color);
 }
 
+strong{
+  color: var(--purple-color);
+}
+
 main{
   background-color: white;
 }
 
-section{
+section:not(.folio){
   color: var(--grey-color);
-  padding: 1rem;
   box-sizing: border-box;
+}
+
+section:not(#port){
+  padding: 1rem;
 }
 
 section a{
@@ -319,16 +326,29 @@ main a:hover{
   color: var(--purple-color);
 }
 
-/* #port a:hover{
-  background-color: none;
-} */
+#port>h2,
+#port>p{
+  padding-left: 1rem;
+}
+
+#port>h2{
+  padding-top: 1rem;
+}
 
 .folio{
   flex: 1 0 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
 
   display: flex;
   flex-flow: column nowrap;
+
+  background-color: rgb(222, 222, 222);
+  border-radius: 5px;
+}
+
+.folio:not(:last-of-type){
+  margin-bottom: 1rem;
+
 }
 
 .folio img{
@@ -408,6 +428,27 @@ footer p{
   padding: 0 0 0 1.5rem;
 }
 
+/* =================================== */
+/*   SCROLL TO THE TOP BUTTON  */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 99;
+  font-size: 35px;
+  border: none;
+  outline: none;
+  background-color: var(--purple-color);
+  color: white;
+  cursor: pointer;
+  padding: 0 .8rem;
+  margin: 0;
+  border-radius: 60%;
+  box-shadow: 1px 1px rgb(100,100,100);
+}
+
 
 /* ======================================================== */
 /* ======================================================== */
@@ -415,7 +456,7 @@ footer p{
 /* ======================================================== */
 @media screen and (min-width: 800px){
 
-    section{
+    section:not(#port){
       padding: 2rem 0rem 2rem 2rem;
     }
 
@@ -524,14 +565,19 @@ footer p{
         margin-bottom: 1.8rem;
       }
 
+      #port>h2,
+      #port>p{
+        padding-left: 2rem;
+      }
+
       .folio{
         display: flex;
         flex-flow: row wrap;
 
-        background-color: rgb(243, 243, 243);
-        padding: 1rem;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
+        padding: 2rem;
+        /* margin-right: 2rem;
+        margin-bottom: 2rem; */
+        margin: 1rem 2rem;
       }
 
       .folio h4{
@@ -564,5 +610,15 @@ footer p{
         align-items: center;
         padding-right: 1.5rem;
       }
+
+      /* =================================== */
+      /*   SCROLL TO THE TOP BUTTON  */
+
+      #myBtn {
+        bottom: 100px;
+        right: 50px;
+      }
+
+
 
 }

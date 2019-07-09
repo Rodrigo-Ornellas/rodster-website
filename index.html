@@ -19,6 +19,24 @@
 
 	<!-- TITLE OF BROWSER WINDOW -->
 	<title>ro/&gt; ornellas</title>
+
+	<!-- SCROLL TO THE TOP BUTTON -->
+	<script>
+				window.onscroll = function() {scrollFunction()};
+				function scrollFunction() {
+				  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+				    document.getElementById("myBtn").style.display = "block";
+				  } else {
+				    document.getElementById("myBtn").style.display = "none";
+				  }
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				  document.body.scrollTop = 0;
+				  document.documentElement.scrollTop = 0;
+				}
+	</script>
 </head>
 <body>
 			<header>
@@ -77,7 +95,9 @@
 <section id="port">
 <h2>Portfolio</h2>
 
-<p>All source code can be found at my <a href="http://www.github.com/Rodrigo-Ornellas" target="_blank"> GitHub</a> repositories.</p>
+<p>The source code of the below projects can be found at my <a href="http://www.github.com/Rodrigo-Ornellas" target="_blank"> GitHub</a> repositories.
+<br><br>The projects that were developed in conjunction with other College colleagues are be located on other GitHub accounts but it is possible to find the code through the <a href="https://github.com/Rodrigo-Ornellas" target="_blank">Contribution Section</a> of GitHub in my account.
+<br><br>And the latest professional projects are located on <strong>private repositories</strong> but I can show present the code during a meeting.</p>
 
 <div class="grouping">
 
@@ -209,9 +229,9 @@ This was an individual project that I designed and developed during a college te
 <p class="description"><a href="https://github.com/Rodrigo-Ornellas/roland" target="_blank">Django Project</a> is a Web App that<br />
 1) takes a printer log file,<br />
 2) parses it,<br />
-3) stores the data,<br />
-4) shows the data on list format and<br />
-5) generates a dashboard that shows the history and current status of each printer.<br />
+3) stores the data in a database,<br />
+4) presents the uploaded data on table formats for further drill down and<br />
+5) generates a report that shows the history and current status of each printer.<br />
 <br />
 The Web App uses Django/Python and ORM/SQLite. The project is not complete yet. It is under-development and the code is on GitHub.</p>
 
@@ -221,6 +241,8 @@ The Web App uses Django/Python and ORM/SQLite. The project is not complete yet. 
 	<li>Python</li>
 	<li>SQL</li>
 	<li>Django</li>
+	<li>JavaScript</li>
+	<li>Chart.JS</li>
 </ul>
 </div>
 
@@ -287,7 +309,7 @@ The Web App uses Django/Python and ORM/SQLite. The project is not complete yet. 
 				</div>
 </section>
 </main>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 <footer id="foot">
 <p>Rod Ornellas &copy; 2019</p>
 </footer>
